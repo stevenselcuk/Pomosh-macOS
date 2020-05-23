@@ -1,0 +1,3 @@
+github "sindresorhus/Defaults" "v4.0.0"
+github "sindresorhus/LaunchAtLogin" "v3.0.0"
+github "soffes/HotKey" "v0.1.3"

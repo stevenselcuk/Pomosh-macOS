@@ -20,8 +20,12 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.productivity</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
+	<key>LSUIElement</key>
+	<true/>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2020 Steven J. Selcuk. All rights reserved.</string>
 	<key>NSMainStoryboardFile</key>
@@ -30,6 +34,12 @@
 	<string>NSApplication</string>
 	<key>NSSupportsAutomaticTermination</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Dank Mono Regular.otf</string>
+		<string>Como Bold.otf</string>
+		<string>Como Regular.otf</string>
+	</array>
 	<key>NSSupportsSuddenTermination</key>
 	<true/>
 </dict>
