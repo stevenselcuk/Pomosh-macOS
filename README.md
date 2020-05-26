@@ -1,6 +1,6 @@
 <div align="center">
 	<img src="https://i.imgur.com/BJZkKct.png" width="200" height="200" />
-	<h1><strong>🍅Pomosh</strong></h1>
+	<h1><strong>🍅Pomosh</strong> | Pomodoro technique asistant</h1>
 	
 </div>
 <br>
