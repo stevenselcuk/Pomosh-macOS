@@ -1,0 +1,16 @@
+PODS:
+  - HotKey (0.1.2)
+
+DEPENDENCIES:
+  - HotKey
+
+SPEC REPOS:
+  trunk:
+    - HotKey
+
+SPEC CHECKSUMS:
+  HotKey: ad59450195936c10992438c4210f673de5aee43e
+
+PODFILE CHECKSUM: 990dcb5bc51f2ec9e8e4b8f329e7e2f9e5877ffc
+
+COCOAPODS: 1.8.4

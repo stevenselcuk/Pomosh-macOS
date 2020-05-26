@@ -14,7 +14,7 @@ struct PomoshButtonStyle: ButtonStyle {
             .foregroundColor(.white)
             .background(Color.gray.opacity(0))
             .frame(minWidth: 100, minHeight: 40, alignment: .center)
-            .padding(15)
+            .padding(5)
             .scaleEffect(configuration.isPressed ? 0.9 : 1.0)
     }
 }

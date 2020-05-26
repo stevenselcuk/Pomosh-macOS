@@ -8,14 +8,16 @@
 
 import SwiftUI
 
-struct TooltipComponent: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct Tooltip: NSViewRepresentable {
+    let tooltip: String
+    
+    func makeNSView(context: NSViewRepresentableContext<Tooltip>) -> NSView {
+        let view = NSView()
+        view.toolTip = tooltip
+        return view
     }
-}
-
-struct TooltipComponent_Previews: PreviewProvider {
-    static var previews: some View {
-        TooltipComponent()
+    
+    func updateNSView(_ nsView: NSView, context: NSViewRepresentableContext<Tooltip>) {
+        nsView.toolTip = tooltip
     }
 }

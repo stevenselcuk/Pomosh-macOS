@@ -8,11 +8,11 @@
 
 import Cocoa
 import SwiftUI
-import LaunchAtLogin
 import UserNotifications
 import HotKey
 
-
+let toggleTimerHotkey = HotKey(key: .p, modifiers: [.command, .control])
+// let pauseHotkey = HotKey(key: .s, modifiers: [.command, .control])
 
 
 @NSApplicationMain
@@ -20,37 +20,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     var popover: NSPopover!
     var statusBarItem: NSStatusItem! = NSStatusBar.system.statusItem(withLength: CGFloat(NSStatusItem.variableLength + 70))
-     @ObservedObject var PoTimer = PomoshTimer()
+    @ObservedObject var PoTimer = PomoshTimer()
     
+    // Init default variables for first launch
     let userDefaultsDefaults = [
-        "time" : 1200
-    ]
-    
-    
-    let startHotkey = HotKey(key: .c, modifiers: [.command, .control])
-    let pauseHotkey = HotKey(key: .p, modifiers: [.command, .control])
-
+        "time" : 1200,
+        "fullBreakTime": 600,
+        "fullround": 5,
+        "playsound": true,
+        "shownotifications": true ] as [String : Any]
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        
-        
-
-        
-        UserDefaults.standard.register(defaults: userDefaultsDefaults)
-        
-        
-        startHotkey.keyDownHandler = {
-            print(String(self.PoTimer.textForPlaybackTime(time: TimeInterval(self.PoTimer.timeRemaining))))
-            self.startTimer()
-        }
-        
-        pauseHotkey.keyDownHandler = { [weak self] in
-            self!.PoTimer.isActive = false
-        }
-        
-    
-        
-        
+      //  UserDefaults.standard.register(defaults: userDefaultsDefaults)
         // Create the SwiftUI view that provides the window contents.
         let contentView = ContentView()
         
@@ -83,10 +64,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func updateIcon(iconName : String) {
         self.statusBarItem.button?.image = NSImage(named: iconName)
     }
-    
-    func startTimer() {
-        self.PoTimer.isActive = true
-    }
 
     
     @objc func togglePopover(_ sender: AnyObject?) {
@@ -109,8 +86,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             let menu = NSMenu()
             menu.addItem(NSMenuItem(title: "Pomosh v1.0", action: nil, keyEquivalent: ""))
             menu.addItem(NSMenuItem.separator())
-            menu.addItem(withTitle: "About", action: #selector(about), keyEquivalent: "")
-            menu.addItem(withTitle: "Feature request?", action: #selector(issues), keyEquivalent: "")
+            menu.addItem(withTitle: "Support", action: #selector(about), keyEquivalent: "")
+            menu.addItem(withTitle: "Bug Report", action: #selector(issues), keyEquivalent: "")
             menu.addItem(NSMenuItem.separator())
             menu.addItem(withTitle: "Quit App", action: #selector(quit), keyEquivalent: "q")
 

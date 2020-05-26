@@ -17,49 +17,59 @@ struct ContentView: View {
     // MARK: - Properties
     @State private var currentPage = 0
     @ObservedObject var ThePomoshTimer = PomoshTimer()
-    @State var sliderValue: Double = 0
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     let notificationCenter = UNUserNotificationCenter.current()
-    
-    
-    func refreshFullTime (time: Int) {
-        settings.set(time, forKey: "time")
-        self.ThePomoshTimer.timeRemaining = UserDefaults.standard.integer(forKey: "time")
-    }
-    
+
+    // MARK: - InDaClub
     init() {
-        notificationCenter.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
-            if granted {
-                print("Yay!")
-            } else {
-                print("D'oh")
+        if self.ThePomoshTimer.showNotifications {
+            notificationCenter.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+                if granted {
+                    settings.set(true, forKey: "didNotificationsAllowed")
+                } else {
+                    settings.set(false, forKey: "didNotificationsAllowed")
+                }
             }
         }
     }
-    
-    
     // MARK: - Main Component
-    
     var body: some View {
         
         PagerView(pageCount: 2, currentIndex: $currentPage) {
-            ZStack(alignment: .bottomTrailing) {
-                HStack(alignment: .bottom, spacing: 1.0) {
+            ZStack(alignment: .bottom) {
+                HStack(alignment: .bottom, spacing: 5.0) {
+                    
+
                     Button(action: {
                         self.currentPage = 1
                     }) {
-                        Text("Settings")
-                        
-                    }
+                                            
+                        Image("Settings")
+                            .antialiased(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(maxWidth: 28, maxHeight: 28, alignment: .center)
+                            .overlay(Tooltip(tooltip: "Settings"))
+                                                 }
+ 
                     .buttonStyle(PomoshButtonStyle())
+                    .padding(.bottom, 5.0)
+                    
+                    Spacer()
                     
                     Button(action: {NSApp.terminate(self)}) {
-                        Text("Quit")
-                            .font(.custom("Dank Mono Regular", size: 14))
+                        Image("Quit")
+                            .antialiased(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(maxWidth: 28, maxHeight: 28, alignment: .center)
+                            .overlay(Tooltip(tooltip: "Quit App"))
                     }
+
                     .buttonStyle(PomoshButtonStyle())
-                    
+                    .padding(.bottom, 5.0)
+                   
                     
                 }
                 VStack {
@@ -69,11 +79,10 @@ struct ContentView: View {
                         .frame(maxWidth: 600, maxHeight: 600, alignment: .center)
                     
                     Spacer()
-
+                    
                 }
                 
             }
-                
             .onReceive(timer) { time in
                 guard self.ThePomoshTimer.isActive else { return }
                 if self.ThePomoshTimer.timeRemaining > 0 {
@@ -90,16 +99,18 @@ struct ContentView: View {
                     
                 }
                 
-              //  if self.ThePomoshTimer.playSound && self.ThePomoshTimer.timeRemaining == 7 && self.ThePomoshTimer.round > 0 {
-              //      NSSound(named: "before")?.play()
-              //  }
+                //  if self.ThePomoshTimer.playSound && self.ThePomoshTimer.timeRemaining == 7 && self.ThePomoshTimer.round > 0 {
+                //      NSSound(named: "before")?.play()
+                //  }
                 if self.ThePomoshTimer.timeRemaining == 1 && self.ThePomoshTimer.round > 0 {
                     
                     if self.ThePomoshTimer.playSound {
                         NSSound(named: "done2")?.play()
                     }
-                    self.scheduleAlarmNotification()
                     
+                    if self.ThePomoshTimer.showNotifications {
+                        self.scheduleAlarmNotification()
+                    }
                     // Break time or working time switcher 🎛
                     self.ThePomoshTimer.isBreakActive.toggle()
                     
@@ -109,16 +120,17 @@ struct ContentView: View {
                             self.ThePomoshTimer.isBreakActive = false
                         } else {
                             // Adds time for break
-                             print("It's break time 😴")
-                            // @TODO: We gonna handle this with user defaults
-                            self.ThePomoshTimer.timeRemaining = 5
+                            print("It's break time 😴")
+                            self.ThePomoshTimer.timeRemaining = UserDefaults.standard.optionalInt(forKey: "fullBreakTime") ?? 600
+                            self.ThePomoshTimer.fulltime = UserDefaults.standard.optionalInt(forKey: "fullBreakTime") ?? 600
                         }
                         // Removes 1 from total remaining round
-                         
+                        
                         self.ThePomoshTimer.round -= 1
                         print("🔥Remaining round: \(self.ThePomoshTimer.round)")
                     } else {
                         print("It's working time 💪")
+                        self.ThePomoshTimer.fulltime = UserDefaults.standard.optionalInt(forKey: "time") ?? 1200
                         self.ThePomoshTimer.timeRemaining = UserDefaults.standard.optionalInt(forKey: "time") ?? 1200
                     }
                     
@@ -138,21 +150,94 @@ struct ContentView: View {
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
             .contentShape(Rectangle())
             
-            VStack {
-                Text("Henlo")
-                VStack(alignment: .leading, spacing: 5.0) {
-                    Slider(value: $sliderValue, in: 0...20)
-                    Text("Current slider value: \(sliderValue, specifier: "%.2f")")
-                }.padding()
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 6)
-                            .stroke(lineWidth: 1)
-                            .foregroundColor(sliderValue > 10 ? .green : .gray)
-                )
-            }
+            VStack(alignment: .leading, spacing: 5.0) {
+                Text("Preferences")
+                    .font(.custom("Como Bold", size: 22))
+                    .padding(.bottom, 10.0)
+                
+                VStack(alignment: .leading, spacing: 10.0) {
+                    
+                    Text("Working Time:  \(self.ThePomoshTimer.fulltime / 60) minute")
+                    
+                    
+                    Slider(value: Binding(
+                        get: {
+                            Double(UserDefaults.standard.integer(forKey: "time"))
+                    },
+                        set: {(newValue) in
+                            settings.set(newValue, forKey: "time")
+                            self.ThePomoshTimer.fulltime = Int(newValue)
+                    }
+                    ),in: 1200...3600, step: 300)
+                    
+                    
+                    
+                    Text("Break Time:  \(self.ThePomoshTimer.fullBreakTime / 60) minute")
+                    
+                    
+                    Slider(value: Binding(
+                        get: {
+                            Double(self.ThePomoshTimer.fullBreakTime)
+                    },
+                        set: {(newValue) in
+                            settings.set(newValue, forKey: "fullBreakTime")
+                            self.ThePomoshTimer.fullBreakTime = Int(newValue)
+                    }
+                    ) ,in: 300...600, step: 60)
+                    
+                    
+                    Text("Total rounds in a session")
+                    HStack {
+                        
+                        ForEach(0..<self.ThePomoshTimer.fullround, id: \.self) { index in
+                            
+                            Text("🔥")
+                            
+                        }
+                    }
+                    Slider(value: Binding(
+                        get: {
+                            Double(UserDefaults.standard.integer(forKey: "fullround"))
+                    },
+                        set: {(newValue) in
+                            settings.set(newValue, forKey: "fullround")
+                            self.ThePomoshTimer.fullround = Int(newValue)
+                    }
+                    ),in: 1...12)
+                    
+                    HStack {
+                        Toggle(isOn: $ThePomoshTimer.playSound) {
+                            Text("Sound effects")
+                        }.padding(.vertical, 5.0)
+                        
+                        Toggle(isOn: $ThePomoshTimer.showNotifications) {
+                            Text("Show Notifications")
+                        }
+                        .padding(.vertical, 5.0)
+                    }
+                    
+                    
+                    Button(action: {
+                        self.currentPage = 0
+                    }) {
+                        HStack {
+                            Image("Back")
+                                .antialiased(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(maxWidth: 28, maxHeight: 28, alignment: .center)
+                                .overlay(Tooltip(tooltip: "Go back"))
+                            
+                            Text("Back")
+                        }
+
+                    }
+                        
+                    .buttonStyle(PomoshButtonStyle())
+                .offset(x :-15, y: 15)
+                }
+            }.padding(.horizontal, 30.0)
         }
-        
-        
     }
     
     // MARK: - Local Notifications
@@ -162,13 +247,13 @@ struct ContentView: View {
         var bodyString: String  {
             var string = ""
             if self.ThePomoshTimer.isBreakActive == true {
-                string = "It's break time"
+                string = "Now, It's working time 🔥"
             } else {
-                string = "Now It's work time"
+                string = "It's break time ☕️"
             }
             return string
         }
-        content.title = "Time is up"
+        content.title = "Time is up 🙌"
         content.body = bodyString
         content.sound = UNNotificationSound(named: UNNotificationSoundName("done.wav"))
         content.badge = 1
@@ -188,7 +273,10 @@ struct ContentView: View {
         }
     }
     
-    
-}
+    func openAbout()
+    {
+        AboutWindowController().showWindow()
+    }
 
+}
 

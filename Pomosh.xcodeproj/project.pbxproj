@@ -3,16 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A272941247D443800BF3EB6 /* TooltipComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A272940247D443800BF3EB6 /* TooltipComponent.swift */; };
 		0A2AE86424743C090051EF62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2AE86324743C090051EF62 /* AppDelegate.swift */; };
 		0A2AE86624743C090051EF62 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2AE86524743C090051EF62 /* ContentView.swift */; };
 		0A2AE86824743C0D0051EF62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A2AE86724743C0D0051EF62 /* Assets.xcassets */; };
 		0A2AE86B24743C0D0051EF62 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A2AE86A24743C0D0051EF62 /* Preview Assets.xcassets */; };
 		0A2AE86E24743C0D0051EF62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A2AE86C24743C0D0051EF62 /* Main.storyboard */; };
-		0A2AE89224743D840051EF62 /* LaunchAtLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2AE88F24743D6B0051EF62 /* LaunchAtLogin.framework */; };
 		0A2AE8942474483D0051EF62 /* TimerRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2AE8932474483D0051EF62 /* TimerRing.swift */; };
 		0A2AE896247458BB0051EF62 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2AE895247458BB0051EF62 /* Utils.swift */; };
 		0A2AE89A24758C550051EF62 /* done.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0A2AE89924758C550051EF62 /* done.wav */; };
@@ -20,29 +20,16 @@
 		0A2AE89F247592120051EF62 /* start1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A2AE89C247592120051EF62 /* start1.mp3 */; };
 		0A2AE8A0247592120051EF62 /* before.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A2AE89D247592120051EF62 /* before.mp3 */; };
 		0A2AE8A22475A0490051EF62 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2AE8A12475A0490051EF62 /* Button.swift */; };
-		0A2AE8D12475A4840051EF62 /* HotKey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2AE8CC2475A47E0051EF62 /* HotKey.framework */; };
 		0A2AE8D32475AD4D0051EF62 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2AE8D22475AD4D0051EF62 /* Timer.swift */; };
 		0A2AE8D52476D74B0051EF62 /* PagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2AE8D42476D74B0051EF62 /* PagerView.swift */; };
 		0A2AE8D82476E3CF0051EF62 /* Dank Mono Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A2AE8D72476E3CF0051EF62 /* Dank Mono Regular.otf */; };
 		0A2AE8DA2476E5910051EF62 /* Como Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A2AE8D92476E5910051EF62 /* Como Regular.otf */; };
 		0A2AE8DC2476E5A70051EF62 /* Como Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A2AE8DB2476E5A70051EF62 /* Como Bold.otf */; };
+		0A34D9452479B21600038B6B /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A34D9442479B21600038B6B /* AboutView.swift */; };
+		875749A1AA37C58F4CAD7E46 /* Pods_Pomosh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06BD330B94245A063E16B346 /* Pods_Pomosh.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0A2AE88E24743D6B0051EF62 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0A2AE87824743D6B0051EF62 /* LaunchAtLogin.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E32E9B631EB87D7B000FEEE9;
-			remoteInfo = LaunchAtLogin;
-		};
-		0A2AE89024743D6B0051EF62 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0A2AE87824743D6B0051EF62 /* LaunchAtLogin.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E32E9B741EB87EA3000FEEE9;
-			remoteInfo = LaunchAtLoginHelper;
-		};
 		0A2AE8CB2475A47E0051EF62 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0A2AE8C52475A47E0051EF62 /* HotKey.xcodeproj */;
@@ -67,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06BD330B94245A063E16B346 /* Pods_Pomosh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pomosh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A272940247D443800BF3EB6 /* TooltipComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TooltipComponent.swift; sourceTree = "<group>"; };
 		0A2AE86024743C090051EF62 /* Pomosh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pomosh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A2AE86324743C090051EF62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A2AE86524743C090051EF62 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -75,21 +64,6 @@
 		0A2AE86D24743C0D0051EF62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0A2AE86F24743C0D0051EF62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A2AE87024743C0D0051EF62 /* CountDown.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CountDown.entitlements; sourceTree = "<group>"; };
-		0A2AE87824743D6B0051EF62 /* LaunchAtLogin.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = LaunchAtLogin.xcodeproj; sourceTree = "<group>"; };
-		0A2AE87C24743D6B0051EF62 /* LaunchAtLoginHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LaunchAtLoginHelper.entitlements; sourceTree = "<group>"; };
-		0A2AE87D24743D6B0051EF62 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		0A2AE87E24743D6B0051EF62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0A2AE87F24743D6B0051EF62 /* license */ = {isa = PBXFileReference; lastKnownFileType = text; path = license; sourceTree = "<group>"; };
-		0A2AE88124743D6B0051EF62 /* LaunchAtLogin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LaunchAtLogin.h; sourceTree = "<group>"; };
-		0A2AE88224743D6B0051EF62 /* copy-helper.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "copy-helper.sh"; sourceTree = "<group>"; };
-		0A2AE88324743D6B0051EF62 /* LaunchAtLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAtLogin.swift; sourceTree = "<group>"; };
-		0A2AE88424743D6B0051EF62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0A2AE88524743D6B0051EF62 /* .editorconfig */ = {isa = PBXFileReference; lastKnownFileType = text; path = .editorconfig; sourceTree = "<group>"; };
-		0A2AE88624743D6B0051EF62 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
-		0A2AE88724743D6B0051EF62 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		0A2AE88924743D6B0051EF62 /* funding.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = funding.yml; sourceTree = "<group>"; };
-		0A2AE88A24743D6B0051EF62 /* .gitattributes */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
-		0A2AE88B24743D6B0051EF62 /* before-after.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "before-after.md"; sourceTree = "<group>"; };
 		0A2AE8932474483D0051EF62 /* TimerRing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerRing.swift; sourceTree = "<group>"; };
 		0A2AE895247458BB0051EF62 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		0A2AE89924758C550051EF62 /* done.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = done.wav; sourceTree = "<group>"; };
@@ -125,6 +99,9 @@
 		0A2AE8D72476E3CF0051EF62 /* Dank Mono Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dank Mono Regular.otf"; sourceTree = "<group>"; };
 		0A2AE8D92476E5910051EF62 /* Como Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Como Regular.otf"; sourceTree = "<group>"; };
 		0A2AE8DB2476E5A70051EF62 /* Como Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Como Bold.otf"; sourceTree = "<group>"; };
+		0A34D9442479B21600038B6B /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		C5CB57E54ED89D4E16125F8F /* Pods-Pomosh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pomosh.debug.xcconfig"; path = "Target Support Files/Pods-Pomosh/Pods-Pomosh.debug.xcconfig"; sourceTree = "<group>"; };
+		E33314DA8262CF207A332908 /* Pods-Pomosh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pomosh.release.xcconfig"; path = "Target Support Files/Pods-Pomosh/Pods-Pomosh.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,8 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A2AE8D12475A4840051EF62 /* HotKey.framework in Frameworks */,
-				0A2AE89224743D840051EF62 /* LaunchAtLogin.framework in Frameworks */,
+				875749A1AA37C58F4CAD7E46 /* Pods_Pomosh.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +122,7 @@
 				0A2AE86224743C090051EF62 /* CountDown */,
 				0A2AE86124743C090051EF62 /* Products */,
 				0A2AE87624743D6B0051EF62 /* Frameworks */,
+				DDF4E6E98A3B27A367ADE002 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -177,6 +154,8 @@
 				0A2AE8A12475A0490051EF62 /* Button.swift */,
 				0A2AE8D22475AD4D0051EF62 /* Timer.swift */,
 				0A2AE8D42476D74B0051EF62 /* PagerView.swift */,
+				0A34D9442479B21600038B6B /* AboutView.swift */,
+				0A272940247D443800BF3EB6 /* TooltipComponent.swift */,
 			);
 			path = CountDown;
 			sourceTree = "<group>";
@@ -193,65 +172,9 @@
 			isa = PBXGroup;
 			children = (
 				0A2AE8A32475A47E0051EF62 /* HotKey */,
-				0A2AE87724743D6B0051EF62 /* LaunchAtLogin */,
+				06BD330B94245A063E16B346 /* Pods_Pomosh.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		0A2AE87724743D6B0051EF62 /* LaunchAtLogin */ = {
-			isa = PBXGroup;
-			children = (
-				0A2AE87824743D6B0051EF62 /* LaunchAtLogin.xcodeproj */,
-				0A2AE87B24743D6B0051EF62 /* LaunchAtLoginHelper */,
-				0A2AE87F24743D6B0051EF62 /* license */,
-				0A2AE88024743D6B0051EF62 /* LaunchAtLogin */,
-				0A2AE88524743D6B0051EF62 /* .editorconfig */,
-				0A2AE88624743D6B0051EF62 /* readme.md */,
-				0A2AE88724743D6B0051EF62 /* .gitignore */,
-				0A2AE88824743D6B0051EF62 /* .github */,
-				0A2AE88A24743D6B0051EF62 /* .gitattributes */,
-				0A2AE88B24743D6B0051EF62 /* before-after.md */,
-			);
-			name = LaunchAtLogin;
-			path = Carthage/Checkouts/LaunchAtLogin;
-			sourceTree = "<group>";
-		};
-		0A2AE87924743D6B0051EF62 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				0A2AE88F24743D6B0051EF62 /* LaunchAtLogin.framework */,
-				0A2AE89124743D6B0051EF62 /* LaunchAtLoginHelper.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		0A2AE87B24743D6B0051EF62 /* LaunchAtLoginHelper */ = {
-			isa = PBXGroup;
-			children = (
-				0A2AE87C24743D6B0051EF62 /* LaunchAtLoginHelper.entitlements */,
-				0A2AE87D24743D6B0051EF62 /* main.swift */,
-				0A2AE87E24743D6B0051EF62 /* Info.plist */,
-			);
-			path = LaunchAtLoginHelper;
-			sourceTree = "<group>";
-		};
-		0A2AE88024743D6B0051EF62 /* LaunchAtLogin */ = {
-			isa = PBXGroup;
-			children = (
-				0A2AE88124743D6B0051EF62 /* LaunchAtLogin.h */,
-				0A2AE88224743D6B0051EF62 /* copy-helper.sh */,
-				0A2AE88324743D6B0051EF62 /* LaunchAtLogin.swift */,
-				0A2AE88424743D6B0051EF62 /* Info.plist */,
-			);
-			path = LaunchAtLogin;
-			sourceTree = "<group>";
-		};
-		0A2AE88824743D6B0051EF62 /* .github */ = {
-			isa = PBXGroup;
-			children = (
-				0A2AE88924743D6B0051EF62 /* funding.yml */,
-			);
-			path = .github;
 			sourceTree = "<group>";
 		};
 		0A2AE8A32475A47E0051EF62 /* HotKey */ = {
@@ -385,6 +308,15 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		DDF4E6E98A3B27A367ADE002 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C5CB57E54ED89D4E16125F8F /* Pods-Pomosh.debug.xcconfig */,
+				E33314DA8262CF207A332908 /* Pods-Pomosh.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -392,17 +324,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A2AE87324743C0D0051EF62 /* Build configuration list for PBXNativeTarget "Pomosh" */;
 			buildPhases = (
+				E8875994A0EC5B984F8638D8 /* [CP] Check Pods Manifest.lock */,
 				0A2AE85C24743C090051EF62 /* Sources */,
 				0A2AE85D24743C090051EF62 /* Frameworks */,
 				0A2AE85E24743C090051EF62 /* Resources */,
+				0AEBDBF0002426A5B3A56238 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Pomosh;
-			packageProductDependencies = (
-			);
 			productName = CountDown;
 			productReference = 0A2AE86024743C090051EF62 /* Pomosh.app */;
 			productType = "com.apple.product-type.application";
@@ -431,18 +363,12 @@
 				Base,
 			);
 			mainGroup = 0A2AE85724743C090051EF62;
-			packageReferences = (
-			);
 			productRefGroup = 0A2AE86124743C090051EF62 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
 				{
 					ProductGroup = 0A2AE8C62475A47E0051EF62 /* Products */;
 					ProjectRef = 0A2AE8C52475A47E0051EF62 /* HotKey.xcodeproj */;
-				},
-				{
-					ProductGroup = 0A2AE87924743D6B0051EF62 /* Products */;
-					ProjectRef = 0A2AE87824743D6B0051EF62 /* LaunchAtLogin.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -453,20 +379,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		0A2AE88F24743D6B0051EF62 /* LaunchAtLogin.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = LaunchAtLogin.framework;
-			remoteRef = 0A2AE88E24743D6B0051EF62 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0A2AE89124743D6B0051EF62 /* LaunchAtLoginHelper.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = LaunchAtLoginHelper.app;
-			remoteRef = 0A2AE89024743D6B0051EF62 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		0A2AE8CC2475A47E0051EF62 /* HotKey.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -510,15 +422,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0AEBDBF0002426A5B3A56238 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pomosh/Pods-Pomosh-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pomosh/Pods-Pomosh-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pomosh/Pods-Pomosh-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8875994A0EC5B984F8638D8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pomosh-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0A2AE85C24743C090051EF62 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A34D9452479B21600038B6B /* AboutView.swift in Sources */,
 				0A2AE8D52476D74B0051EF62 /* PagerView.swift in Sources */,
 				0A2AE8A22475A0490051EF62 /* Button.swift in Sources */,
 				0A2AE8942474483D0051EF62 /* TimerRing.swift in Sources */,
 				0A2AE86624743C090051EF62 /* ContentView.swift in Sources */,
+				0A272941247D443800BF3EB6 /* TooltipComponent.swift in Sources */,
 				0A2AE8D32475AD4D0051EF62 /* Timer.swift in Sources */,
 				0A2AE86424743C090051EF62 /* AppDelegate.swift in Sources */,
 				0A2AE896247458BB0051EF62 /* Utils.swift in Sources */,
@@ -662,15 +618,21 @@
 		};
 		0A2AE87424743C0D0051EF62 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5CB57E54ED89D4E16125F8F /* Pods-Pomosh.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CountDown/CountDown.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"CountDown/Preview Content\"";
 				DEVELOPMENT_TEAM = 9937MYTBBA;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = CountDown/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -685,15 +647,21 @@
 		};
 		0A2AE87524743C0D0051EF62 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E33314DA8262CF207A332908 /* Pods-Pomosh.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CountDown/CountDown.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"CountDown/Preview Content\"";
 				DEVELOPMENT_TEAM = 9937MYTBBA;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = CountDown/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
