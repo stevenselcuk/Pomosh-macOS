@@ -26,6 +26,8 @@ Lightweight, easy-to-use, good looking productivity tool
 - Written with Swift & SwiftUI
 
 
+[See website for details](https://pomosh.netlify.app/)
+
 ## Requirements 🤔
 
 `MacOS 10.15`
