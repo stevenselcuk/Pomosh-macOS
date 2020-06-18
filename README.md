@@ -6,12 +6,15 @@
 <br>
 
 <p align="center">
+	
+	<blockquote class="imgur-embed-pub" lang="en" data-id="QMYjQ0w"><a href="https://imgur.com/QMYjQ0w">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 		<a href="https://apps.apple.com/us/app/garlic-for-remote-jobs/id1509031122?ls=1" target="_blank">
     <img
       src="https://imgur.com/j9fMBUl.gif"
       height="420"
       alt="Pomosh"
       title="Pomosh | Pomodoro technique asistant"
+	 
     />
 			</a>
 	  <div style="margin: 0 auto">
