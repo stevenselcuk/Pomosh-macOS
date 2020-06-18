@@ -8,7 +8,7 @@
 <p align="center">
 		<a href="https://apps.apple.com/us/app/garlic-for-remote-jobs/id1509031122?ls=1" target="_blank">
     <img
-      src="https://i.imgur.com/72wscxy.png"
+      src="https://imgur.com/yBauXZQ.gif"
       height="420"
       alt="Pomosh"
       title="Pomosh | Pomodoro technique asistant"
