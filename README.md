@@ -6,22 +6,20 @@
 <br>
 
 <p align="center">
-		<a href="https://apps.apple.com/us/app/garlic-for-remote-jobs/id1509031122?ls=1" target="_blank">
+<a href="https://apps.apple.com/us/app/garlic-for-remote-jobs/id1509031122?ls=1" target="_blank">
     <img
       src="https://imgur.com/j9fMBUl.gif"
       height="420"
       alt="Pomosh"
       title="Pomosh | Pomodoro technique asistant"
-	 
-    />
-			</a>
-	  <div style="margin: 0 auto">
-  <a href="https://www.producthunt.com/posts/pomosh-for-macos?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-pomosh-for-macos" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=204674&theme=light" alt="Pomosh for macOS - Your next awesome Pomodoro Timer | Product Hunt Embed" style="width: 250px; height: 54px;" width="250px" height="54px" /></a>
-	</div>
+    /></a>
+
 	
   </p>
   
-
+	  <div>
+  <a href="https://www.producthunt.com/posts/pomosh-for-macos?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-pomosh-for-macos" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=204674&theme=light" alt="Pomosh for macOS - Your next awesome Pomodoro Timer | Product Hunt Embed" style="width: 250px; height: 54px;" width="250px" height="54px" /></a>
+	</div>
   
 <br>
 
