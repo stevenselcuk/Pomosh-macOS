@@ -17,11 +17,9 @@
 	
   </p>
   
-	  <div>
+
   <a href="https://www.producthunt.com/posts/pomosh-for-macos?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-pomosh-for-macos" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=204674&theme=light" alt="Pomosh for macOS - Your next awesome Pomodoro Timer | Product Hunt Embed" style="width: 250px; height: 54px;" width="250px" height="54px" /></a>
-	</div>
-  
-<br>
+
 
 ## About 🍅 Pomosh
 
