@@ -6,9 +6,6 @@
 <br>
 
 <p align="center">
-	
-	
-	
 		<a href="https://apps.apple.com/us/app/garlic-for-remote-jobs/id1509031122?ls=1" target="_blank">
     <img
       src="https://imgur.com/j9fMBUl.gif"
