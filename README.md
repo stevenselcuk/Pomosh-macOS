@@ -57,14 +57,7 @@ A working block and a break count as a cycle. A Cycle with a 25-minute working &
 
 ## Download 🚀
 
-<div align="center">
-<a href="https://apps.apple.com/us/app/pomosh/id1515791898?ls=1">
-<img src="https://i.imgur.com/k9PVrPn.png"   alt="Pomosh Download Button"
-      title="Download on App Store" />
-</a>
-</div>
-
-<br>
+[![](https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/macappstore-lrg.svg)](https://apps.apple.com/us/app/pomosh/id1515791898?ls=1)
 
 ... or you may want to download from Github
 
