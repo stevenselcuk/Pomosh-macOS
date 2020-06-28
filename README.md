@@ -71,7 +71,7 @@ A working block and a break count as a cycle. A Cycle with a 25-minute working &
 
 ## Change log 🧠
 
-### v1.0.0
+### v1.0.1
 
 - Improvements
  Pomodoro coverage: Long break duration for every 4th rounds (Github issue #1)
