@@ -61,15 +61,29 @@ A working block and a break count as a cycle. A Cycle with a 25-minute working &
 
 ... or you may want to download from Github
 
-[🍅v.1.0 App](https://github.com/stevenselcuk/Pomosh/releases/download/1.0/Pomosh.v1.0.zip) | [🍅v.1.0 Dmg](https://github.com/stevenselcuk/Pomosh/releases/download/1.0/Pomosh.v1.0.dmg)
+[🍅v.1.0.1 App](https://github.com/stevenselcuk/Pomosh/releases/download/1.0.1/Pomosh.v1.0.1.zip) | [🍅v.1.0.1 Dmg](https://github.com/stevenselcuk/Pomosh/releases/download/1.0.1/Pomosh.v1.0.1.dmg)
 
 
 ## Roadmap 🗺
 
 - [x] Submit to Apple Store!
 - [x] Launch on Producthunt 
-- [x] Pomosh  for iOS
-- [x] Pomosh for Apple Watch
+- [ ] Launch at startup option
+
+## Change log 🧠
+
+### v1.0.0
+
+- Improvements
+ Pomodoro coverage: Long break duration for every 4th rounds (Github issue #1)
+ Some UI enhancements: Settings and back buttons location arrangement
+
+- New feature: New sound effects for timer start/stop & creating new session action & Settings and back button clicks 
+
+- Bugfix: Notification badge now resets when the app launched.
+
+### v1.0 : Initial Release
+
 
 ## Notes and Credits 🍍
 
