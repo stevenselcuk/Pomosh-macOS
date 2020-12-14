@@ -71,6 +71,10 @@ A working block and a break count as a cycle. A Cycle with a 25-minute working &
 
 ## Change log 🧠
 
+### 🏷 v1.0.2
+
+- Bugfix: Settings set issue on Big Sur has been fixed.
+
 ### 🏷 v1.0.1
 
 - Improvements
