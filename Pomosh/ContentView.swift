@@ -16,6 +16,7 @@ struct ContentView: View {
     
     // MARK: - Properties
     @State private var currentPage = 0
+    @State private var runnedRounds = 0
     @ObservedObject var ThePomoshTimer = PomoshTimer()
     // @State private var startUp = LaunchAtLogin.isEnabled
     
@@ -44,6 +45,9 @@ struct ContentView: View {
                     
                     Button(action: {
                         self.currentPage = 1
+                        if self.ThePomoshTimer.playSound {
+                            NSSound(named: "touch")?.play()
+                        }
                     }) {
                         
                         Image("Settings")
@@ -55,7 +59,7 @@ struct ContentView: View {
                     }
                         
                     .buttonStyle(PomoshButtonStyle())
-                    .padding(.bottom, 5.0)
+                    .padding(.bottom, 10)
                     
                     Spacer()
                     
@@ -69,12 +73,12 @@ struct ContentView: View {
                     }
                         
                     .buttonStyle(PomoshButtonStyle())
-                    .padding(.bottom, 5.0)
+                    .padding(.bottom, 10)
                     
                     
                 }
                 VStack {
-                    TimerRing(color1: #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1), color2: #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1), width: 300, height: 300, percent: CGFloat(((Float(ThePomoshTimer.fulltime) - Float(ThePomoshTimer.timeRemaining))/Float(ThePomoshTimer.fulltime)) * 100), Timer: ThePomoshTimer)
+                    TimerRing(color1: #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1), color2: #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1), width: 300, height: 300, percent: CGFloat(((Float(ThePomoshTimer.fulltime) - Float(ThePomoshTimer.timeRemaining))/Float(ThePomoshTimer.fulltime)) * 100), Timer: ThePomoshTimer, currentRound: self.runnedRounds )
                         .padding()
                         .scaledToFit()
                         .frame(maxWidth: 600, maxHeight: 600, alignment: .center)
@@ -121,13 +125,21 @@ struct ContentView: View {
                             self.ThePomoshTimer.isBreakActive = false
                         } else {
                             // Adds time for break
-                            //        print("It's break time 😴")
-                            self.ThePomoshTimer.timeRemaining = UserDefaults.standard.optionalInt(forKey: "fullBreakTime") ?? 600
-                            self.ThePomoshTimer.fulltime = UserDefaults.standard.optionalInt(forKey: "fullBreakTime") ?? 600
+                            //        print("It's break time 😴"
+                            if (self.runnedRounds == 3 || self.runnedRounds == 7) {
+                              self.ThePomoshTimer.timeRemaining = 1200
+                                self.ThePomoshTimer.fulltime = 1200
+                            } else {
+                                self.ThePomoshTimer.timeRemaining = UserDefaults.standard.optionalInt(forKey: "fullBreakTime") ?? 600
+                               self.ThePomoshTimer.fulltime = UserDefaults.standard.optionalInt(forKey: "fullBreakTime") ?? 600
+                                
+                            }
+
                         }
                         // Removes 1 from total remaining round
                         
                         self.ThePomoshTimer.round -= 1
+                        self.runnedRounds += 1
                         //       print("🔥Remaining round: \(self.ThePomoshTimer.round)")
                     } else {
                         //      print("It's working time 💪")
@@ -142,10 +154,6 @@ struct ContentView: View {
                     
                     self.ThePomoshTimer.isActive = false
                 }
-                
-            }
-            .onAppear {
-                
                 
             }
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
@@ -170,9 +178,11 @@ struct ContentView: View {
                             settings.set(newValue, forKey: "time")
                             self.ThePomoshTimer.fulltime = Int(newValue)
                     }
-                    ),in: 1200...3600, step: 300)
+                  ),in: 1200...3600, step: 300)
+
+                   
                     
-                    
+
                     
                     Text("Break Time:  \(self.ThePomoshTimer.fullBreakTime / 60) minute")
                         .font(.custom("Space Mono Regular", size: 12))
@@ -186,8 +196,9 @@ struct ContentView: View {
                             settings.set(newValue, forKey: "fullBreakTime")
                             self.ThePomoshTimer.fullBreakTime = Int(newValue)
                     }
-                    ) ,in: 300...600, step: 60)
-                    
+                  ) ,in: 300...600, step: 60)
+   
+                   
                     
                     Text("Total cycles in a session")
                         .font(.custom("Space Mono Regular", size: 12))
@@ -205,9 +216,9 @@ struct ContentView: View {
                     },
                         set: {(newValue) in
                             settings.set(newValue, forKey: "fullround")
-                            self.ThePomoshTimer.fullround = Int(newValue)
+                         self.ThePomoshTimer.fullround = Int(newValue)
                     }
-                    ),in: 1...12)
+                    ),in: 1...8)
                     
                     HStack {
                         Toggle(isOn: $ThePomoshTimer.playSound) {
@@ -231,6 +242,9 @@ struct ContentView: View {
                     
                     Button(action: {
                         self.currentPage = 0
+                        if self.ThePomoshTimer.playSound {
+                            NSSound(named: "touch")?.play()
+                        }
                     }) {
                         HStack {
                             Image("Back")
@@ -250,6 +264,9 @@ struct ContentView: View {
                     .offset(x :-18, y: 10)
                 }
             }.padding(.horizontal, 30.0)
+                .onAppear {
+                    self.notificationCenter .removeAllDeliveredNotifications()
+            }
         }
     }
     
@@ -269,7 +286,6 @@ struct ContentView: View {
         content.title = "Time is up 🙌"
         content.body = bodyString
         content.sound = UNNotificationSound(named: UNNotificationSoundName("done.wav"))
-        content.badge = 1
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.1, repeats: false)
         let identifier = "localNotification"

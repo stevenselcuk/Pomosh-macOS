@@ -17,8 +17,10 @@ struct TimerRing: View {
     var width : CGFloat = 300
     var height : CGFloat = 300
     var percent : CGFloat = 10
+
     @State private var morphing = false
     var Timer: PomoshTimer
+    var currentRound:Int
     
     var body: some View {
         
@@ -44,9 +46,10 @@ struct TimerRing: View {
                 
                 VStack(alignment: .center, spacing: 15){
                     if self.Timer.isActive {
-                        Text(self.Timer.isBreakActive ? "Break time 🙌" : "🔥 X \(self.Timer.round)")
+                        Text(self.Timer.isBreakActive ? self.currentRound == 4 || self.currentRound == 8 ? "Long break 🎉" : "Break time 🙌" : "🔥 X \(self.Timer.round)")
                             //     .font(.system(size: 14))
                             .font(.custom("Space Mono Regular", size: 12))
+                        .animation(nil)
                     } else {
                         Text(self.Timer.round > 0 ? self.Timer.isBreakActive ? "Break stopped" : "Start" : "Create New Session")
                             //   .font(.system(size: 14))
@@ -55,7 +58,7 @@ struct TimerRing: View {
                                 if self.Timer.round == 0 {
                                     if self.Timer.playSound {
                                         
-                                        NSSound(named: "start1")?.play()
+                                        NSSound(named: "start")?.play()
                                     }
                                     self.Timer.round = UserDefaults.standard.optionalInt(forKey: "fullround") ?? 5
                                     self.Timer.timeRemaining = UserDefaults.standard.optionalInt(forKey: "time") ?? 1200
@@ -66,6 +69,7 @@ struct TimerRing: View {
                     
                     Button(action: {
                         self.Timer.isActive.toggle()
+         
                     }) {
                         if self.Timer.isActive && self.Timer.round > 0 {
                             Image("Pause")
@@ -133,11 +137,14 @@ struct TimerRing: View {
         .onTapGesture {
             if self.Timer.round == 0 {
                 if self.Timer.playSound {
-                    
-                    NSSound(named: "start1")?.play()
+                    NSSound(named: "start")?.play()
                 }
                 self.Timer.round = UserDefaults.standard.optionalInt(forKey: "fullround") ?? 5
                 self.Timer.timeRemaining = UserDefaults.standard.optionalInt(forKey: "time") ?? 1200
+            } else {
+                if self.Timer.playSound {
+                    NSSound(named: "touch2")?.play()
+                }
             }
             self.Timer.isActive.toggle()
         }

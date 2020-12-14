@@ -14,7 +14,11 @@ class PomoshTimer: ObservableObject {
     // MARK: - Default Variables
     @Published var fulltime = UserDefaults.standard.optionalInt(forKey: "time") ?? 1200
     @Published var fullBreakTime = UserDefaults.standard.optionalInt(forKey: "fullBreakTime") ?? 600
-    @Published var fullround = UserDefaults.standard.optionalInt(forKey: "fullround") ?? 5
+    @Published var fullround = UserDefaults.standard.optionalInt(forKey: "fullround") ?? 5 {
+    didSet {
+        settings.set(fullround, forKey: "fullround")
+    }
+}
     // MARK: - Active Variables
     @Published var timeRemaining = 0
     @Published var breakTime = 0

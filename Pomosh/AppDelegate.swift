@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import AppKit
 import SwiftUI
 import UserNotifications
 import HotKey
@@ -84,9 +85,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         } else if event.type == NSEvent.EventType.rightMouseUp{
             
             let menu = NSMenu()
-            menu.addItem(NSMenuItem(title: "Pomosh v1.0", action: nil, keyEquivalent: ""))
+            menu.addItem(NSMenuItem(title: "Pomosh v1.0.1", action: nil, keyEquivalent: ""))
             menu.addItem(NSMenuItem.separator())
-            menu.addItem(withTitle: "Support", action: #selector(about), keyEquivalent: "")
+            menu.addItem(withTitle: "About", action: #selector(about), keyEquivalent: "")
             menu.addItem(withTitle: "Bug Report", action: #selector(issues), keyEquivalent: "")
             menu.addItem(NSMenuItem.separator())
             menu.addItem(withTitle: "Quit App", action: #selector(quit), keyEquivalent: "q")
@@ -114,7 +115,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @objc func issues()
     {
-        let url = URL(string: "https://github.com/stevenselcuk/pomosh/issues")!
+        let url = URL(string: "https://github.com/stevenselcuk/Pomosh-macOS/issues")!
         NSWorkspace.shared.open(url)
     }
     
