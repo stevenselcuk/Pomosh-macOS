@@ -59,9 +59,13 @@ A working block and a break count as a cycle. A Cycle with a 25-minute working &
 
 [![](https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/macappstore-lrg.svg)](https://apps.apple.com/us/app/pomosh/id1515791898?ls=1)
 
-... or you may want to download from Github
+... or you may want to download notarized version from Github
 
-[🍅v.1.0.1 App](https://github.com/stevenselcuk/Pomosh-macOS/releases/download/1.0.1/Pomosh.v.1.0.1.zip) | [🍅v.1.0.1 Dmg](https://github.com/stevenselcuk/Pomosh-macOS/releases/download/1.0.1/Pomosh.v.1.0.1.dmg)
+[🍅v.1.0.2 App](https://github.com/stevenselcuk/Pomosh-macOS/releases/download/1.0.2/Pomosh.v.1.0.2.zip) | [🍅v.1.0.2 Dmg](https://github.com/stevenselcuk/Pomosh-macOS/releases/download/1.0.2/Pomosh.1.0.2.dmg)
+
+## Do you like it? 🙌
+
+[![Buy Me A Coffee](https://raw.githubusercontent.com/stevenselcuk/palamut/master/tools/orange_img.png)](https://www.buymeacoffee.com/stevenselcuk)
 
 ## Roadmap 🗺
 
@@ -93,9 +97,4 @@ A working block and a break count as a cycle. A Cycle with a 25-minute working &
 Special thanks for her feedback to [Heval Hazal Kurt](https://github.com/hevalhazalkurt) 🙌
 
 Some of icons made by Freepik from www.flaticon.com
-
-## Do you like it? 🙌
-
-[![Buy Me A Coffee](https://raw.githubusercontent.com/stevenselcuk/palamut/master/tools/orange_img.png)](https://www.buymeacoffee.com/stevenselcuk)
-
 
