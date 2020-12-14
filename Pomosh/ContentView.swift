@@ -88,6 +88,9 @@ struct ContentView: View {
                 }
                 
             }
+            .onAppear {
+                self.notificationCenter.removeAllDeliveredNotifications()
+            }
             .onReceive(timer) { time in
                 guard self.ThePomoshTimer.isActive else { return }
                 if self.ThePomoshTimer.timeRemaining > 0 {
@@ -264,9 +267,7 @@ struct ContentView: View {
                     .offset(x :-18, y: 10)
                 }
             }.padding(.horizontal, 30.0)
-                .onAppear {
-                    self.notificationCenter .removeAllDeliveredNotifications()
-            }
+               
         }
     }
     
