@@ -20,6 +20,7 @@
 
   <a href="https://www.producthunt.com/posts/pomosh-for-macos?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-pomosh-for-macos" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=204674&theme=light" alt="Pomosh for macOS - Your next awesome Pomodoro Timer | Product Hunt Embed" style="width: 250px; height: 54px;" width="250px" height="54px" /></a>
 
+Looking for iOS version repo? [stevenselcuk/Pomosh-iOS-watchOS](https://github.com/stevenselcuk/Pomosh-iOS-watchOS) 
 
 ## About 🍅 Pomosh
 
@@ -56,26 +57,32 @@ A working block and a break count as a cycle. A Cycle with a 25-minute working &
 
 ## Download 🚀
 
-<div align="center">
-<a href="https://apps.apple.com/us/app/pomosh/id1515791898?ls=1">
-<img src="https://i.imgur.com/k9PVrPn.png"   alt="Pomosh Download Button"
-      title="Download on App Store" />
-</a>
-</div>
-
-<br>
+[![](https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/macappstore-lrg.svg)](https://apps.apple.com/us/app/pomosh/id1515791898?ls=1)
 
 ... or you may want to download from Github
 
-[🍅v.1.0 App](https://github.com/stevenselcuk/Pomosh/releases/download/1.0/Pomosh.v1.0.zip) | [🍅v.1.0 Dmg](https://github.com/stevenselcuk/Pomosh/releases/download/1.0/Pomosh.v1.0.dmg)
-
+[🍅v.1.0.1 App](https://github.com/stevenselcuk/Pomosh-macOS/releases/download/1.0.1/Pomosh.v.1.0.1.zip) | [🍅v.1.0.1 Dmg](https://github.com/stevenselcuk/Pomosh-macOS/releases/download/1.0.1/Pomosh.v.1.0.1.dmg)
 
 ## Roadmap 🗺
 
 - [x] Submit to Apple Store!
 - [x] Launch on Producthunt 
-- [x] Pomosh  for iOS
-- [x] Pomosh for Apple Watch
+- [ ] Launch at startup option
+
+## Change log 🧠
+
+### 🏷 v1.0.1
+
+- Improvements
+ Pomodoro coverage: Long break duration for every 4th rounds (Github issue #1)
+ Some UI enhancements: Settings and back buttons location arrangement
+
+- New feature: New sound effects for timer start/stop & creating new session action & Settings and back button clicks 
+
+- Bugfix: Notification badge now resets when the app launched.
+
+### 🏷 v1.0 : Initial Release
+
 
 ## Notes and Credits 🍍
 
