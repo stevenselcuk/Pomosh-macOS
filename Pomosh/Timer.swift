@@ -8,43 +8,53 @@
 
 import Foundation
 
-
 class PomoshTimer: ObservableObject {
-    
     // MARK: - Default Variables
+
     @Published var fulltime = UserDefaults.standard.optionalInt(forKey: "time") ?? 1200
     @Published var fullBreakTime = UserDefaults.standard.optionalInt(forKey: "fullBreakTime") ?? 600
     @Published var fullround = UserDefaults.standard.optionalInt(forKey: "fullround") ?? 5 {
-    didSet {
-        settings.set(fullround, forKey: "fullround")
+        didSet {
+            settings.set(fullround, forKey: "fullround")
+        }
     }
-}
+
     // MARK: - Active Variables
+
     @Published var timeRemaining = 0
     @Published var breakTime = 0
     @Published var round = 0
+
     // MARK: - Mechanic Variables
+
     @Published var isActive = true
     @Published var isBreakActive = false
+
     // MARK: - Settings
-    @Published var playSound:Bool = UserDefaults.standard.optionalBool(forKey: "playsound") ?? true {
+
+    @Published var playSound: Bool = UserDefaults.standard.optionalBool(forKey: "playsound") ?? true {
         didSet {
             settings.set(playSound, forKey: "playsound")
         }
     }
-    @Published var showNotifications:Bool = UserDefaults.standard.optionalBool(forKey: "shownotifications") ?? true {
+
+    @Published var showNotifications: Bool = UserDefaults.standard.optionalBool(forKey: "shownotifications") ?? true {
         didSet {
             settings.set(showNotifications, forKey: "shownotifications")
         }
     }
+
     // MARK: - Initializer
+
     init() {
         // Operate registered shortcut Control + Command + P is toggles timer
         toggleTimerHotkey.keyDownHandler = { [weak self] in
             self!.isActive.toggle()
         }
     }
+
     // MARK: - Int to Human Readable Time String
+
     func textForPlaybackTime(time: TimeInterval) -> String {
         if !time.isNormal {
             return "00:00"
@@ -60,4 +70,3 @@ class PomoshTimer: ObservableObject {
         }
     }
 }
-
