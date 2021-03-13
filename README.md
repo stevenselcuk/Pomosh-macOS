@@ -1,5 +1,5 @@
 <div align="center">
-	<img src="https://i.imgur.com/BJZkKct.png" width="200" height="200" />
+	<img src="https://imgur.com/qcyQcIV.png" width="200" height="200" />
 	<h1><strong>🍅 Pomosh</strong> • Pomodoro technique asistant •</h1>
 	
 </div>
@@ -36,6 +36,10 @@ A working block and a break count as a cycle. A Cycle with a 25-minute working &
 
 - Timer: Helps you to follow Pomodoro Technique practices. It shows remaining working/break time with remaining cycles in your session. You can start/pause with clicking. The first click on the timer creates a session. You can think session = your typical working day. The timer automatically continues between work/break cycles. You cannot skip a period. But, yes, you can pause the timer.
 
+- Skip Button: You can skip current round if you failed your task.
+
+- Reload Button: You can restart your round instead of skipping it if you failed your task.
+
 - Settings: Pomosh is flexible. You can easily change the working & break duration. Also, you can set total cycles in a session, which depends on your workload and rhythm. 
 
 - Menubar Countdown: There is no need to click the app every time to check the remaining time. It shows working & break time. The flame icon means it's working time. Coffee cup with a clock says it's break time. Just enjoy your time.
@@ -61,7 +65,7 @@ A working block and a break count as a cycle. A Cycle with a 25-minute working &
 
 ... or you may want to download notarized version from Github
 
-[🍅v.1.0.2 App](https://github.com/stevenselcuk/Pomosh-macOS/releases/download/1.0.2/Pomosh.v.1.0.2.zip) | [🍅v.1.0.2 Dmg](https://github.com/stevenselcuk/Pomosh-macOS/releases/download/1.0.2/Pomosh.1.0.2.dmg)
+[🍅v.1.0.3 App](https://github.com/stevenselcuk/Pomosh-macOS/releases/download/v1.0.3/Pomosh.zip) | [🍅v.1.0.3 Dmg](https://github.com/stevenselcuk/Pomosh-macOS/releases/download/v1.0.3/Pomosh.1.0.3.dmg)
 
 ## Do you like it? 🙌
 
@@ -74,6 +78,13 @@ A working block and a break count as a cycle. A Cycle with a 25-minute working &
 - [ ] Launch at startup option
 
 ## Change log 🧠
+
+### 🏷 v1.0.3 : New functions & more Big Sur
+
+- Skip round feature
+- Reload round feature
+- Big Sur icons
+- Menubar timer styling fix for Big Sur
 
 ### 🏷 v1.0.2
 
