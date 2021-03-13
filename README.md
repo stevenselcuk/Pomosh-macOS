@@ -1,5 +1,5 @@
 <div align="center">
-	<img src="https://i.imgur.com/BJZkKct.png" width="200" height="200" />
+	<img src="https://imgur.com/qcyQcIV.png" width="200" height="200" />
 	<h1><strong>🍅 Pomosh</strong> • Pomodoro technique asistant •</h1>
 	
 </div>
@@ -61,7 +61,7 @@ A working block and a break count as a cycle. A Cycle with a 25-minute working &
 
 ... or you may want to download notarized version from Github
 
-[🍅v.1.0.2 App](https://github.com/stevenselcuk/Pomosh-macOS/releases/download/1.0.2/Pomosh.v.1.0.2.zip) | [🍅v.1.0.2 Dmg](https://github.com/stevenselcuk/Pomosh-macOS/releases/download/1.0.2/Pomosh.1.0.2.dmg)
+[🍅v.1.0.3 App](https://github.com/stevenselcuk/Pomosh-macOS/releases/download/v1.0.3/Pomosh.zip) | [🍅v.1.0.3 Dmg](https://github.com/stevenselcuk/Pomosh-macOS/releases/download/v1.0.3/Pomosh.1.0.3.dmg)
 
 ## Do you like it? 🙌
 
@@ -74,6 +74,13 @@ A working block and a break count as a cycle. A Cycle with a 25-minute working &
 - [ ] Launch at startup option
 
 ## Change log 🧠
+
+### 🏷 v1.0.3 : New functions & more Big Sur
+
+- Skip round feature
+- Reload round feature
+- Big Sur icons
+- Menubar timer styling fix for Big Sur
 
 ### 🏷 v1.0.2
 
