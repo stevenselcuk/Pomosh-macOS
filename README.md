@@ -36,6 +36,10 @@ A working block and a break count as a cycle. A Cycle with a 25-minute working &
 
 - Timer: Helps you to follow Pomodoro Technique practices. It shows remaining working/break time with remaining cycles in your session. You can start/pause with clicking. The first click on the timer creates a session. You can think session = your typical working day. The timer automatically continues between work/break cycles. You cannot skip a period. But, yes, you can pause the timer.
 
+- Skip Button: You can skip current round if you failed your task.
+
+- Reload Button: You can restart your round instead of skipping it if you failed your task.
+
 - Settings: Pomosh is flexible. You can easily change the working & break duration. Also, you can set total cycles in a session, which depends on your workload and rhythm. 
 
 - Menubar Countdown: There is no need to click the app every time to check the remaining time. It shows working & break time. The flame icon means it's working time. Coffee cup with a clock says it's break time. Just enjoy your time.
