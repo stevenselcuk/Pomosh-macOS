@@ -75,7 +75,6 @@ A working block and a break count as a cycle. A Cycle with a 25-minute working &
 
 - [x] Submit to Apple Store!
 - [x] Launch on Producthunt 
-- [ ] Launch at startup option
 
 ## Change log 🧠
 
