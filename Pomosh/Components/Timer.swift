@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import SwiftUI 
 class PomoshTimer: ObservableObject {
     // MARK: - Default Variables
 
@@ -47,6 +47,8 @@ class PomoshTimer: ObservableObject {
     @Published var showMenubarTimer: Bool = UserDefaults.standard.optionalBool(forKey: "showMenubarTimer") ?? true {
         didSet {
             settings.set(showMenubarTimer, forKey: "showMenubarTimer")
+            (NSApp.delegate as! AppDelegate).updateIcon(iconName: String("menubar-icon"))
+            (NSApp.delegate as! AppDelegate).updateTitle(newTitle: String(""))
         }
     }
 

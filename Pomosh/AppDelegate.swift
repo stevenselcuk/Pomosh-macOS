@@ -34,7 +34,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //  UserDefaults.standard.register(defaults: userDefaultsDefaults)
         // Create the SwiftUI view that provides the window contents.
         let contentView = ContentView()
-
+        NSMenu.setMenuBarVisible(true)
         // Create the popover
         let popover = NSPopover()
         popover.contentSize = NSSize(width: 400, height: 400)
@@ -75,6 +75,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 if popover.isShown {
                     popover.performClose(sender)
                 } else {
+                
                     popover.show(relativeTo: sbutton.bounds, of: sbutton, preferredEdge: NSRectEdge.minY)
                 }
             }
