@@ -8,11 +8,11 @@
 
 import AppKit
 import Cocoa
-import HotKey
+//import HotKey
 import SwiftUI
 import UserNotifications
 
-let toggleTimerHotkey = HotKey(key: .p, modifiers: [.command, .control])
+//let toggleTimerHotkey = HotKey(key: .p, modifiers: [.command, .control])
 // let pauseHotkey = HotKey(key: .s, modifiers: [.command, .control])
 
 @NSApplicationMain
@@ -27,7 +27,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         "fullBreakTime": 600,
         "fullround": 5,
         "playsound": true,
-        "shownotifications": true] as [String: Any]
+        "shownotifications": true,
+        "showMenubarTimer": true] as [String: Any]
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         //  UserDefaults.standard.register(defaults: userDefaultsDefaults)
@@ -48,8 +49,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if let button = statusBarItem.button {
             button.image = NSImage(named: "menubar-icon")
             button.imagePosition = NSControl.ImagePosition.imageLeft
-            button.title = String(PoTimer.textForPlaybackTime(time: TimeInterval(PoTimer.timeRemaining)))
+           if self.PoTimer.showMenubarTimer == true {
+                button.title = String(self.PoTimer.textForPlaybackTime(time: TimeInterval(PoTimer.timeRemaining)))
             button.font = NSFont.monospacedDigitSystemFont(ofSize: 12.0, weight: NSFont.Weight.medium)
+            }
+           
             button.action = #selector(togglePopover(_:))
             button.sendAction(on: [.leftMouseUp, .rightMouseUp])
         }
@@ -77,7 +81,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         } else if event.type == NSEvent.EventType.rightMouseUp {
             let menu = NSMenu()
-            menu.addItem(NSMenuItem(title: "Pomosh v1.0.2", action: nil, keyEquivalent: ""))
+            menu.addItem(NSMenuItem(title: "Pomosh v1.0.4", action: nil, keyEquivalent: ""))
             menu.addItem(NSMenuItem.separator())
             menu.addItem(NSMenuItem(title: "Give ⭐️", action: #selector(giveStar), keyEquivalent: "s"))
             menu.addItem(withTitle: "About", action: #selector(about), keyEquivalent: "a")

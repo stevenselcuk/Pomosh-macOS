@@ -6,7 +6,7 @@
 //  Copyright © 2020 Steven J. Selcuk. All rights reserved.
 //
 
-import HotKey
+//import HotKey
 import SwiftUI
 import UserNotifications
 
@@ -134,11 +134,16 @@ struct ContentView: View {
                     self.ThePomoshTimer.timeRemaining -= 1
 
                     if self.ThePomoshTimer.isBreakActive == true {
+                        if self.ThePomoshTimer.showMenubarTimer == true {
                         (NSApp.delegate as! AppDelegate).updateIcon(iconName: String("Coffee"))
-                        (NSApp.delegate as! AppDelegate).updateTitle(newTitle: String(self.ThePomoshTimer.textForPlaybackTime(time: TimeInterval(self.ThePomoshTimer.timeRemaining))))
+                            (NSApp.delegate as! AppDelegate).updateTitle(newTitle: String(self.ThePomoshTimer.textForPlaybackTime(time: TimeInterval(self.ThePomoshTimer.timeRemaining))))
+                        }
+
                     } else {
+                        if self.ThePomoshTimer.showMenubarTimer == true {
                         (NSApp.delegate as! AppDelegate).updateIcon(iconName: String("Work"))
                         (NSApp.delegate as! AppDelegate).updateTitle(newTitle: String(self.ThePomoshTimer.textForPlaybackTime(time: TimeInterval(self.ThePomoshTimer.timeRemaining))))
+                        }
                     }
                 }
 
@@ -184,8 +189,12 @@ struct ContentView: View {
 
                 } else if self.ThePomoshTimer.timeRemaining == 0 {
                     //      print("Streak! 🔥 Session has ended.")
-                    (NSApp.delegate as! AppDelegate).updateIcon(iconName: String("menubar-icon"))
-                    (NSApp.delegate as! AppDelegate).updateTitle(newTitle: String("00:00"))
+                   
+                    if self.ThePomoshTimer.showMenubarTimer == true {
+                        (NSApp.delegate as! AppDelegate).updateIcon(iconName: String("menubar-icon"))
+                        (NSApp.delegate as! AppDelegate).updateTitle(newTitle: String("00:00"))
+                    }
+                   
 
                     self.ThePomoshTimer.isActive = false
                 }
@@ -251,6 +260,12 @@ struct ContentView: View {
 
                         Toggle(isOn: $ThePomoshTimer.showNotifications) {
                             Text("Show Notifications")
+                                .font(.custom("Space Mono Regular", size: 12))
+                        }
+                        .padding(.vertical, 5.0)
+                        
+                        Toggle(isOn: $ThePomoshTimer.showMenubarTimer) {
+                            Text("Show Menubar Timer")
                                 .font(.custom("Space Mono Regular", size: 12))
                         }
                         .padding(.vertical, 5.0)

@@ -1,6 +1,0 @@
-framework module Pods_Pomosh {
-  umbrella header "Pods-Pomosh-umbrella.h"
-
-  export *
-  module * { export * }
-}

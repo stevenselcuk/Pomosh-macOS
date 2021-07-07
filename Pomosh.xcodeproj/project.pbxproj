@@ -7,15 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0ABCDE042695C726002EBE16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ABCDE032695C726002EBE16 /* Main.storyboard */; };
 		0AC221A524A8F564007E3BE9 /* start.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0AC221A324A8F564007E3BE9 /* start.wav */; };
 		0AC221A624A8F564007E3BE9 /* touch.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0AC221A424A8F564007E3BE9 /* touch.wav */; };
 		0AC221A824A8F615007E3BE9 /* touch2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0AC221A724A8F615007E3BE9 /* touch2.wav */; };
 		0AC4C3702480398800125806 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC4C36F2480398800125806 /* AppDelegate.swift */; };
 		0AC4C3722480398800125806 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC4C3712480398800125806 /* ContentView.swift */; };
-		0AC4C3752480398800125806 /* Pomosh.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0AC4C3732480398800125806 /* Pomosh.xcdatamodeld */; };
 		0AC4C3772480398900125806 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AC4C3762480398900125806 /* Assets.xcassets */; };
 		0AC4C37A2480398900125806 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AC4C3792480398900125806 /* Preview Assets.xcassets */; };
-		0AC4C37D2480398900125806 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AC4C37B2480398900125806 /* Main.storyboard */; };
 		0AC4C387248039CF00125806 /* TimerRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC4C386248039CF00125806 /* TimerRing.swift */; };
 		0AC4C389248039E800125806 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC4C388248039E800125806 /* Utils.swift */; };
 		0AC4C38B248039FF00125806 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC4C38A248039FF00125806 /* Button.swift */; };
@@ -26,7 +25,6 @@
 		0AC4C39624803A7A00125806 /* SpaceMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AC4C39524803A7A00125806 /* SpaceMono-Regular.ttf */; };
 		0AC4C39824803B8900125806 /* done2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0AC4C39724803B8900125806 /* done2.mp3 */; };
 		0AC4C39A24803BB500125806 /* SpaceMono-Regular.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0AC4C39524803A7A00125806 /* SpaceMono-Regular.ttf */; };
-		25AB2986AE3C3AAFDDC78E89 /* Pods_Pomosh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4B499513346ECF083FA0E98 /* Pods_Pomosh.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,17 +41,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0ABCDE032695C726002EBE16 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0AC221A324A8F564007E3BE9 /* start.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = start.wav; sourceTree = "<group>"; };
 		0AC221A424A8F564007E3BE9 /* touch.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = touch.wav; sourceTree = "<group>"; };
 		0AC221A724A8F615007E3BE9 /* touch2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = touch2.wav; sourceTree = "<group>"; };
-		0AC221AA24A902F9007E3BE9 /* LaunchAtLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LaunchAtLogin.framework; path = Carthage/Build/Mac/LaunchAtLogin.framework; sourceTree = "<group>"; };
 		0AC4C36C2480398800125806 /* Pomosh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pomosh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AC4C36F2480398800125806 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AC4C3712480398800125806 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		0AC4C3742480398800125806 /* Pomosh.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pomosh.xcdatamodel; sourceTree = "<group>"; };
 		0AC4C3762480398900125806 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AC4C3792480398900125806 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0AC4C37C2480398900125806 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0AC4C37E2480398900125806 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AC4C37F2480398900125806 /* Pomosh.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pomosh.entitlements; sourceTree = "<group>"; };
 		0AC4C386248039CF00125806 /* TimerRing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerRing.swift; sourceTree = "<group>"; };
@@ -65,9 +61,6 @@
 		0AC4C39224803A5C00125806 /* TooltipComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TooltipComponent.swift; sourceTree = "<group>"; };
 		0AC4C39524803A7A00125806 /* SpaceMono-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpaceMono-Regular.ttf"; sourceTree = "<group>"; };
 		0AC4C39724803B8900125806 /* done2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = done2.mp3; sourceTree = "<group>"; };
-		436652A764C9EC28A4EA44CC /* Pods-Pomosh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pomosh.debug.xcconfig"; path = "Target Support Files/Pods-Pomosh/Pods-Pomosh.debug.xcconfig"; sourceTree = "<group>"; };
-		A06984CEFF601A74927AD061 /* Pods-Pomosh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pomosh.release.xcconfig"; path = "Target Support Files/Pods-Pomosh/Pods-Pomosh.release.xcconfig"; sourceTree = "<group>"; };
-		C4B499513346ECF083FA0E98 /* Pods_Pomosh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pomosh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,19 +68,48 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25AB2986AE3C3AAFDDC78E89 /* Pods_Pomosh.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A8E33832695C5C800ED9ADB /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				0AC4C39724803B8900125806 /* done2.mp3 */,
+				0AC221A324A8F564007E3BE9 /* start.wav */,
+				0AC221A724A8F615007E3BE9 /* touch2.wav */,
+				0AC221A424A8F564007E3BE9 /* touch.wav */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
+		0A8E33842695C5EE00ED9ADB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0AC4C386248039CF00125806 /* TimerRing.swift */,
+				0AC4C38E24803A3400125806 /* PagerView.swift */,
+				0AC4C39024803A4500125806 /* AboutView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0A8E33852695C5FE00ED9ADB /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0AC4C38A248039FF00125806 /* Button.swift */,
+				0AC4C38C24803A1200125806 /* Timer.swift */,
+				0AC4C39224803A5C00125806 /* TooltipComponent.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		0AC4C3632480398800125806 = {
 			isa = PBXGroup;
 			children = (
 				0AC4C36E2480398800125806 /* Pomosh */,
 				0AC4C36D2480398800125806 /* Products */,
-				8A464268EEA3B0398BFB17FF /* Pods */,
 				A57E8F441FB871414D85212F /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -103,26 +125,18 @@
 		0AC4C36E2480398800125806 /* Pomosh */ = {
 			isa = PBXGroup;
 			children = (
-				0AC4C39724803B8900125806 /* done2.mp3 */,
+				0ABCDE032695C726002EBE16 /* Main.storyboard */,
+				0A8E33852695C5FE00ED9ADB /* Components */,
+				0A8E33842695C5EE00ED9ADB /* Views */,
+				0A8E33832695C5C800ED9ADB /* Sound */,
 				0AC4C39424803A6D00125806 /* Fonts */,
 				0AC4C36F2480398800125806 /* AppDelegate.swift */,
 				0AC4C3712480398800125806 /* ContentView.swift */,
 				0AC4C3762480398900125806 /* Assets.xcassets */,
-				0AC4C37B2480398900125806 /* Main.storyboard */,
 				0AC4C37E2480398900125806 /* Info.plist */,
-				0AC221A324A8F564007E3BE9 /* start.wav */,
-				0AC221A724A8F615007E3BE9 /* touch2.wav */,
-				0AC221A424A8F564007E3BE9 /* touch.wav */,
 				0AC4C37F2480398900125806 /* Pomosh.entitlements */,
-				0AC4C3732480398800125806 /* Pomosh.xcdatamodeld */,
 				0AC4C3782480398900125806 /* Preview Content */,
-				0AC4C386248039CF00125806 /* TimerRing.swift */,
 				0AC4C388248039E800125806 /* Utils.swift */,
-				0AC4C38A248039FF00125806 /* Button.swift */,
-				0AC4C38C24803A1200125806 /* Timer.swift */,
-				0AC4C38E24803A3400125806 /* PagerView.swift */,
-				0AC4C39024803A4500125806 /* AboutView.swift */,
-				0AC4C39224803A5C00125806 /* TooltipComponent.swift */,
 			);
 			path = Pomosh;
 			sourceTree = "<group>";
@@ -143,20 +157,9 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		8A464268EEA3B0398BFB17FF /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				436652A764C9EC28A4EA44CC /* Pods-Pomosh.debug.xcconfig */,
-				A06984CEFF601A74927AD061 /* Pods-Pomosh.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		A57E8F441FB871414D85212F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0AC221AA24A902F9007E3BE9 /* LaunchAtLogin.framework */,
-				C4B499513346ECF083FA0E98 /* Pods_Pomosh.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -168,12 +171,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0AC4C3822480398900125806 /* Build configuration list for PBXNativeTarget "Pomosh" */;
 			buildPhases = (
-				0D63458BCB132344BA35DB3E /* [CP] Check Pods Manifest.lock */,
 				0AC4C3682480398800125806 /* Sources */,
 				0AC4C3692480398800125806 /* Frameworks */,
 				0AC4C36A2480398800125806 /* Resources */,
 				0AC4C39924803BA900125806 /* CopyFiles */,
-				E351BC0ECDB1E3F9370ACB6D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -222,10 +223,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AC4C37D2480398900125806 /* Main.storyboard in Resources */,
 				0AC221A524A8F564007E3BE9 /* start.wav in Resources */,
 				0AC4C39624803A7A00125806 /* SpaceMono-Regular.ttf in Resources */,
 				0AC221A824A8F615007E3BE9 /* touch2.wav in Resources */,
+				0ABCDE042695C726002EBE16 /* Main.storyboard in Resources */,
 				0AC4C39824803B8900125806 /* done2.mp3 in Resources */,
 				0AC221A624A8F564007E3BE9 /* touch.wav in Resources */,
 				0AC4C37A2480398900125806 /* Preview Assets.xcassets in Resources */,
@@ -235,48 +236,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		0D63458BCB132344BA35DB3E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Pomosh-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E351BC0ECDB1E3F9370ACB6D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Pomosh/Pods-Pomosh-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Pomosh/Pods-Pomosh-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pomosh/Pods-Pomosh-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		0AC4C3682480398800125806 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -285,7 +244,6 @@
 				0AC4C389248039E800125806 /* Utils.swift in Sources */,
 				0AC4C38B248039FF00125806 /* Button.swift in Sources */,
 				0AC4C38D24803A1200125806 /* Timer.swift in Sources */,
-				0AC4C3752480398800125806 /* Pomosh.xcdatamodeld in Sources */,
 				0AC4C39124803A4500125806 /* AboutView.swift in Sources */,
 				0AC4C38F24803A3400125806 /* PagerView.swift in Sources */,
 				0AC4C3722480398800125806 /* ContentView.swift in Sources */,
@@ -296,17 +254,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		0AC4C37B2480398900125806 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0AC4C37C2480398900125806 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		0AC4C3802480398900125806 /* Debug */ = {
@@ -426,29 +373,26 @@
 		};
 		0AC4C3832480398900125806 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 436652A764C9EC28A4EA44CC /* Pods-Pomosh.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Pomosh/Pomosh.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"Pomosh/Preview Content\"";
 				DEVELOPMENT_TEAM = 9937MYTBBA;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Pomosh/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = org.tabbycat.PomoshProductiviyTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -457,29 +401,26 @@
 		};
 		0AC4C3842480398900125806 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A06984CEFF601A74927AD061 /* Pods-Pomosh.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Pomosh/Pomosh.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"Pomosh/Preview Content\"";
 				DEVELOPMENT_TEAM = 9937MYTBBA;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Pomosh/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = org.tabbycat.PomoshProductiviyTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -508,19 +449,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		0AC4C3732480398800125806 /* Pomosh.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				0AC4C3742480398800125806 /* Pomosh.xcdatamodel */,
-			);
-			currentVersion = 0AC4C3742480398800125806 /* Pomosh.xcdatamodel */;
-			path = Pomosh.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 0AC4C3642480398800125806 /* Project object */;
 }
