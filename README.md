@@ -67,10 +67,6 @@ A working block and a break count as a cycle. A Cycle with a 25-minute working &
 
 [🍅v.1.0.3 App](https://github.com/stevenselcuk/Pomosh-macOS/releases/download/v1.0.3/Pomosh.zip) | [🍅v.1.0.3 Dmg](https://github.com/stevenselcuk/Pomosh-macOS/releases/download/v1.0.3/Pomosh.1.0.3.dmg)
 
-## Do you like it? 🙌
-
-[![Buy Me A Coffee](https://raw.githubusercontent.com/stevenselcuk/palamut/master/tools/orange_img.png)](https://www.buymeacoffee.com/stevenselcuk)
-
 ## Roadmap 🗺
 
 - [x] Submit to Apple Store!
