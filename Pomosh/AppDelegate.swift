@@ -17,9 +17,11 @@ import UserNotifications
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-    var popover: NSPopover!
-    var statusBarItem: NSStatusItem! = NSStatusBar.system.statusItem(withLength: CGFloat(NSStatusItem.variableLength + 70))
     @ObservedObject var PoTimer = PomoshTimer()
+    var popover: NSPopover!
+
+    var statusBarItem: NSStatusItem! = NSStatusBar.system.statusItem(withLength: CGFloat(NSStatusItem.variableLength + ( PomoshTimer().showMenubarTimer ? 70 : 0)))
+  
 
     // Init default variables for first launch
     let userDefaultsDefaults = [
@@ -75,7 +77,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 if popover.isShown {
                     popover.performClose(sender)
                 } else {
-                
                     popover.show(relativeTo: sbutton.bounds, of: sbutton, preferredEdge: NSRectEdge.minY)
                 }
             }
