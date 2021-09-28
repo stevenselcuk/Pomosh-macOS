@@ -1,0 +1,4 @@
+/* Bundle name */
+"CFBundleName" = "Pomosh";
+/* Copyright (human-readable) */
+"NSHumanReadableCopyright" = "Copyright © 2021 Steven J. Selcuk. All rights reserved.";
