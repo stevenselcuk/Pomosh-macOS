@@ -41,11 +41,11 @@ struct TimerRing: View {
                         LinearGradient(gradient: Gradient(colors: [Color(self.Timer.isBreakActive ? color3 : color1), Color(self.Timer.isBreakActive ? color4 : color2)]), startPoint: .topLeading, endPoint: .bottomLeading),
                         style: StrokeStyle(lineWidth: 5 * multiplier, lineCap: .round, lineJoin: .round, miterLimit: .infinity, dash: [20, 0], dashPhase: 0)
                     )
-        .frame(width: width, height: width)
-        //.animation(.linear)                
-        .rotationEffect(Angle(degrees: 90))
-        .rotation3DEffect(Angle(degrees: 180), axis: (x: 1, y: 0, z: 0))
-        .shadow(color: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)).opacity(0.1), radius: 5 * multiplier, x: 0, y: 5 * multiplier)
+                    .frame(width: width, height: width)
+                    //.animation(.linear)
+                    .rotationEffect(Angle(degrees: 90))
+                    .rotation3DEffect(Angle(degrees: 180), axis: (x: 1, y: 0, z: 0))
+                    .shadow(color: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)).opacity(0.1), radius: 5 * multiplier, x: 0, y: 5 * multiplier)
                 
                 VStack(alignment: .center, spacing: 15) {
                     if self.Timer.isActive {
