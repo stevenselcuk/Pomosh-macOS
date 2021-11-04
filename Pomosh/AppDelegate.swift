@@ -100,7 +100,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         } else if event.type == NSEvent.EventType.rightMouseUp {
             let menu = NSMenu()
-            menu.addItem(NSMenuItem(title: "Pomosh v1.0.4", action: nil, keyEquivalent: ""))
+            menu.addItem(NSMenuItem(title: "Pomosh v1.0.6", action: nil, keyEquivalent: ""))
             menu.addItem(NSMenuItem.separator())
             menu.addItem(NSMenuItem(title: "Give ⭐️", action: #selector(giveStar), keyEquivalent: "s"))
             menu.addItem(withTitle: "About", action: #selector(about), keyEquivalent: "a")

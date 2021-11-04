@@ -74,6 +74,10 @@ A working block and a break count as a cycle. A Cycle with a 25-minute working &
 
 ## Change log 🧠
 
+### 🏷 v1.0.6 : Improve the performance. 
+
+- Processor load optimization 
+
 ### 🏷 v1.0.5 : Option for disabling menubar timer
 
 - UI&UX related fixes
