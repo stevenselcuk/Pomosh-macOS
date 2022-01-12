@@ -1,6 +1,6 @@
 
 
-<h1>Do you like Pomosh? If you like, <a href="https://apps.apple.com/us/app/garlic-for-remote-jobs/id1509031122?ls=1" target="_blank">Please consider support !</a> </h1>
+<h1>Do you like Pomosh? If you like, <a href="https://apps.apple.com/us/app/pomosh/id1515791898?ls=1" target="_blank">Please consider support !</a> </h1>
 
 <div align="center">
 	<img src="https://imgur.com/qcyQcIV.png" width="200" height="200" />
@@ -10,7 +10,7 @@
 <br>
 
 <p align="center">
-<a href="https://apps.apple.com/us/app/garlic-for-remote-jobs/id1509031122?ls=1" target="_blank">
+<a href="https://apps.apple.com/us/app/pomosh/id1515791898?ls=1" target="_blank">
     <img
       src="https://raw.githubusercontent.com/stevenselcuk/Pomosh-macOS/master/demo.gif"
       height="420"
