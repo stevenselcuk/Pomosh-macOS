@@ -9,6 +9,7 @@
 import AppKit
 import Cocoa
 // import HotKey
+import SwiftData
 import SwiftUI
 import UserNotifications
 
@@ -17,11 +18,13 @@ import UserNotifications
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-    @ObservedObject var PoTimer = PomoshTimer()
+    @ObservedObject var PoTimer = PomoshTimer.shared
     var popover: NSPopover!
+    var globalHotkeyMonitor: Any?
     let invisibleWindow = NSWindow(contentRect: NSMakeRect(0, 0, 20, 5), styleMask: .borderless, backing: .buffered, defer: false)
 
-    var statusBarItem: NSStatusItem! = NSStatusBar.system.statusItem(withLength: CGFloat(NSStatusItem.variableLength + (PomoshTimer().showMenubarTimer ? 70 : 0)))
+    var statusBarItem: NSStatusItem!
+    var floatingTimerController: FloatingTimerWindowController?
 
     // Init default variables for first launch
     let userDefaultsDefaults = [
@@ -36,9 +39,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //  UserDefaults.standard.register(defaults: userDefaultsDefaults)
         // Create the SwiftUI view that provides the window contents.
 
+        statusBarItem = NSStatusBar.system.statusItem(withLength: CGFloat(NSStatusItem.variableLength + (PoTimer.showMenubarTimer ? 70 : 0)))
+
         invisibleWindow.backgroundColor = .red
         invisibleWindow.alphaValue = 0
         let contentView = ContentView()
+            .modelContainer(for: [PomodoroSession.self, PomodoroTask.self])
 
         let popover = NSPopover()
         popover.contentSize = NSSize(width: 400, height: 400)
@@ -61,6 +67,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             button.action = #selector(togglePopover(_:))
             button.sendAction(on: [.leftMouseUp, .rightMouseUp])
         }
+
+        floatingTimerController = FloatingTimerWindowController()
+
+        // Global hotkey: Cmd+Ctrl+P toggles play/pause
+        globalHotkeyMonitor = NSEvent.addGlobalMonitorForEvents(matching: .keyDown) { [weak self] event in
+            guard let self = self else { return }
+            if event.modifierFlags.contains([.command, .control]) && event.keyCode == 35 {
+                DispatchQueue.main.async {
+                    self.PoTimer.isActive.toggle()
+                }
+            }
+        }
     }
 
     func updateTitle(newTitle: String) {
@@ -69,6 +87,23 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func updateIcon(iconName: String) {
         statusBarItem.button?.image = NSImage(named: iconName)
+    }
+
+    func showPopover() {
+        guard !popover.isShown,
+              let sbutton = statusBarItem.button,
+              let window = sbutton.window else { return }
+        let buttonRect: NSRect = sbutton.convert(sbutton.bounds, to: nil)
+        let screenRect: NSRect = window.convertToScreen(buttonRect)
+        let posX = screenRect.origin.x + (screenRect.width / 2) - 10
+        let posY = screenRect.origin.y
+        invisibleWindow.setFrameOrigin(NSPoint(x: posX, y: posY))
+        invisibleWindow.makeKeyAndOrderFront(self)
+        NSApplication.shared.presentationOptions = []
+        popover.show(relativeTo: invisibleWindow.contentView!.frame,
+                     of: invisibleWindow.contentView!,
+                     preferredEdge: NSRectEdge.minY)
+        NSApp.activate(ignoringOtherApps: true)
     }
 
     @objc func togglePopover(_ sender: AnyObject?) {
@@ -100,11 +135,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         } else if event.type == NSEvent.EventType.rightMouseUp {
             let menu = NSMenu()
-            menu.addItem(NSMenuItem(title: "Pomosh v1.0.6", action: nil, keyEquivalent: ""))
+            let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0.7"
+            menu.addItem(NSMenuItem(title: "Pomosh v\(version)", action: nil, keyEquivalent: ""))
             menu.addItem(NSMenuItem.separator())
             menu.addItem(NSMenuItem(title: "Give ⭐️", action: #selector(giveStar), keyEquivalent: "s"))
             menu.addItem(withTitle: "About", action: #selector(about), keyEquivalent: "a")
             menu.addItem(withTitle: "Bug Report", action: #selector(issues), keyEquivalent: "b")
+            menu.addItem(NSMenuItem.separator())
+            let floatingTitle = PoTimer.showFloatingTimer ? "Hide Floating Timer" : "Show Floating Timer"
+            menu.addItem(NSMenuItem(title: floatingTitle, action: #selector(toggleFloatingTimer), keyEquivalent: "f"))
             menu.addItem(NSMenuItem.separator())
             menu.addItem(withTitle: "Quit App", action: #selector(quit), keyEquivalent: "q")
 
@@ -126,6 +165,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @objc func about() {
         let url = URL(string: "https://pomosh.netlify.app/")!
         NSWorkspace.shared.open(url)
+    }
+
+    @objc func toggleFloatingTimer() {
+        PoTimer.showFloatingTimer.toggle()
     }
 
     @objc func issues() {

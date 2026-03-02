@@ -25,6 +25,14 @@
 		0AC4C39624803A7A00125806 /* SpaceMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AC4C39524803A7A00125806 /* SpaceMono-Regular.ttf */; };
 		0AC4C39824803B8900125806 /* done2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0AC4C39724803B8900125806 /* done2.mp3 */; };
 		0AC4C39A24803BB500125806 /* SpaceMono-Regular.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0AC4C39524803A7A00125806 /* SpaceMono-Regular.ttf */; };
+		AA000001248039CF00125806 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000002248039CF00125806 /* ThemeManager.swift */; };
+		AA000003248039CF00125806 /* AmbientSoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000004248039CF00125806 /* AmbientSoundManager.swift */; };
+		AA000005248039CF00125806 /* PomodoroSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000006248039CF00125806 /* PomodoroSession.swift */; };
+		AA000007248039CF00125806 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000008248039CF00125806 /* StatsView.swift */; };
+		BB000001248039CF00125806 /* PomodoroTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000002248039CF00125806 /* PomodoroTask.swift */; };
+		BB000003248039CF00125806 /* TaskBacklogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000004248039CF00125806 /* TaskBacklogView.swift */; };
+		CC000001248039CF00125806 /* FloatingTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC000002248039CF00125806 /* FloatingTimerView.swift */; };
+		CC000003248039CF00125806 /* FloatingTimerWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC000004248039CF00125806 /* FloatingTimerWindowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -61,6 +69,14 @@
 		0AC4C39224803A5C00125806 /* TooltipComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TooltipComponent.swift; sourceTree = "<group>"; };
 		0AC4C39524803A7A00125806 /* SpaceMono-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpaceMono-Regular.ttf"; sourceTree = "<group>"; };
 		0AC4C39724803B8900125806 /* done2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = done2.mp3; sourceTree = "<group>"; };
+		AA000002248039CF00125806 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		AA000004248039CF00125806 /* AmbientSoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmbientSoundManager.swift; sourceTree = "<group>"; };
+		AA000006248039CF00125806 /* PomodoroSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroSession.swift; sourceTree = "<group>"; };
+		AA000008248039CF00125806 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		BB000002248039CF00125806 /* PomodoroTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroTask.swift; sourceTree = "<group>"; };
+		BB000004248039CF00125806 /* TaskBacklogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskBacklogView.swift; sourceTree = "<group>"; };
+		CC000002248039CF00125806 /* FloatingTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTimerView.swift; sourceTree = "<group>"; };
+		CC000004248039CF00125806 /* FloatingTimerWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTimerWindowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +107,10 @@
 				0AC4C386248039CF00125806 /* TimerRing.swift */,
 				0AC4C38E24803A3400125806 /* PagerView.swift */,
 				0AC4C39024803A4500125806 /* AboutView.swift */,
+				AA000008248039CF00125806 /* StatsView.swift */,
+				BB000004248039CF00125806 /* TaskBacklogView.swift */,
+				CC000002248039CF00125806 /* FloatingTimerView.swift */,
+				CC000004248039CF00125806 /* FloatingTimerWindowController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -101,8 +121,19 @@
 				0AC4C38A248039FF00125806 /* Button.swift */,
 				0AC4C38C24803A1200125806 /* Timer.swift */,
 				0AC4C39224803A5C00125806 /* TooltipComponent.swift */,
+				AA000002248039CF00125806 /* ThemeManager.swift */,
+				AA000004248039CF00125806 /* AmbientSoundManager.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		AA000009248039CF00125806 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AA000006248039CF00125806 /* PomodoroSession.swift */,
+				BB000002248039CF00125806 /* PomodoroTask.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		0AC4C3632480398800125806 = {
@@ -128,6 +159,7 @@
 				0ABCDE032695C726002EBE16 /* Main.storyboard */,
 				0A8E33852695C5FE00ED9ADB /* Components */,
 				0A8E33842695C5EE00ED9ADB /* Views */,
+				AA000009248039CF00125806 /* Models */,
 				0A8E33832695C5C800ED9ADB /* Sound */,
 				0AC4C39424803A6D00125806 /* Fonts */,
 				0AC4C36F2480398800125806 /* AppDelegate.swift */,
@@ -251,6 +283,14 @@
 				0AC4C39324803A5C00125806 /* TooltipComponent.swift in Sources */,
 				0AC4C3702480398800125806 /* AppDelegate.swift in Sources */,
 				0AC4C387248039CF00125806 /* TimerRing.swift in Sources */,
+				AA000001248039CF00125806 /* ThemeManager.swift in Sources */,
+				AA000003248039CF00125806 /* AmbientSoundManager.swift in Sources */,
+				AA000005248039CF00125806 /* PomodoroSession.swift in Sources */,
+				AA000007248039CF00125806 /* StatsView.swift in Sources */,
+				BB000001248039CF00125806 /* PomodoroTask.swift in Sources */,
+				BB000003248039CF00125806 /* TaskBacklogView.swift in Sources */,
+				CC000001248039CF00125806 /* FloatingTimerView.swift in Sources */,
+				CC000003248039CF00125806 /* FloatingTimerWindowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

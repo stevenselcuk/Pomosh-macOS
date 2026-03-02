@@ -33,6 +33,13 @@ extension UserDefaults {
         }
         return nil
     }
+
+    public func optionalDouble(forKey defaultName: String) -> Double? {
+        if self.object(forKey: defaultName) != nil {
+            return self.double(forKey: defaultName)
+        }
+        return nil
+    }
 }
 
 

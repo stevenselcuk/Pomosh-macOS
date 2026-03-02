@@ -9,17 +9,14 @@
 import SwiftUI
 
 struct TimerRing: View {
-    var color1 = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
-    var color2 = #colorLiteral(red: 0.09019608051, green: 0, blue: 0.3019607961, alpha: 1)
-    var color3 = #colorLiteral(red: 1, green: 0.003921568627, blue: 0.4588235294, alpha: 1)
-    var color4 = #colorLiteral(red: 0.9921568627, green: 0.9294117647, blue: 0.1333333333, alpha: 1)
     var width: CGFloat = 300
     var height: CGFloat = 300
     var percent: CGFloat = 10
 
     @State private var morphing = false
+    @ObservedObject var themeManager = ThemeManager.shared
     var Timer: PomoshTimer
-    
+    @Binding var taskName: String
     var currentRound: Int
 
     var body: some View {
@@ -38,17 +35,29 @@ struct TimerRing: View {
                 Circle()
                     .trim(from: true ? progress : 1, to: 1)
                     .stroke(
-                        LinearGradient(gradient: Gradient(colors: [Color(self.Timer.isBreakActive ? color3 : color1), Color(self.Timer.isBreakActive ? color4 : color2)]), startPoint: .topLeading, endPoint: .bottomLeading),
+                        LinearGradient(
+                            gradient: Gradient(colors: self.Timer.isBreakActive
+                                ? themeManager.currentTheme.ringBreakColors
+                                : themeManager.currentTheme.ringWorkColors),
+                            startPoint: .topLeading,
+                            endPoint: .bottomLeading
+                        ),
                         style: StrokeStyle(lineWidth: 5 * multiplier, lineCap: .round, lineJoin: .round, miterLimit: .infinity, dash: [20, 0], dashPhase: 0)
                     )
                     .frame(width: width, height: width)
-                    //.animation(.linear)
                     .rotationEffect(Angle(degrees: 90))
                     .rotation3DEffect(Angle(degrees: 180), axis: (x: 1, y: 0, z: 0))
-                    .shadow(color: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)).opacity(0.1), radius: 5 * multiplier, x: 0, y: 5 * multiplier)
+                    .shadow(color: themeManager.currentTheme.accentColor.opacity(0.2), radius: 5 * multiplier, x: 0, y: 5 * multiplier)
                 
                 VStack(alignment: .center, spacing: 15) {
                     if self.Timer.isActive {
+                        if !taskName.isEmpty && !self.Timer.isBreakActive {
+                            Text(taskName)
+                                .font(.custom("Space Mono Regular", size: 10))
+                                .opacity(0.5)
+                                .lineLimit(1)
+                                .frame(maxWidth: 160)
+                        }
                         Text(self.Timer.isBreakActive ? self.currentRound == 4 || self.currentRound == 8 ? "Long break 🎉" : "Break time 🙌" : "🔥 X \(self.Timer.round)")
                             .font(.custom("Space Mono Regular", size: 12))
                             .animation(nil)
@@ -93,10 +102,18 @@ struct TimerRing: View {
                     if self.Timer.round > 0 {
                         Text("\(self.Timer.textForPlaybackTime(time: TimeInterval(self.Timer.timeRemaining)))")
                             .font(.custom("Space Mono Regular", size: 28))
-                            .shadow(color: Color("Green").opacity(0.1), radius: 5 * multiplier, x: 0, y: 5 * multiplier)
+                            .shadow(color: themeManager.currentTheme.accentColor.opacity(0.3), radius: 5 * multiplier, x: 0, y: 5 * multiplier)
                             .lineLimit(1)
-                            .foregroundColor(Color("Neon"))
+                            .foregroundColor(themeManager.currentTheme.accentColor)
                             .offset(x: 0, y: 5)
+                    } else {
+                        TextField("What's your focus?", text: $taskName)
+                            .textFieldStyle(.plain)
+                            .font(.custom("Space Mono Regular", size: 11))
+                            .foregroundColor(.secondary)
+                            .multilineTextAlignment(.center)
+                            .frame(width: 180)
+                            .padding(.top, 8)
                     }
                 }
             }

@@ -9,6 +9,8 @@
 import Foundation
 import SwiftUI 
 class PomoshTimer: ObservableObject {
+    static let shared = PomoshTimer()
+
     // MARK: - Default Variables
 
     @Published var fulltime = UserDefaults.standard.optionalInt(forKey: "time") ?? 1200
@@ -49,6 +51,12 @@ class PomoshTimer: ObservableObject {
             settings.set(showMenubarTimer, forKey: "showMenubarTimer")
             (NSApp.delegate as! AppDelegate).updateIcon(iconName: String("menubar-icon"))
             (NSApp.delegate as! AppDelegate).updateTitle(newTitle: String(""))
+        }
+    }
+
+    @Published var showFloatingTimer: Bool = UserDefaults.standard.optionalBool(forKey: "showFloatingTimer") ?? false {
+        didSet {
+            settings.set(showFloatingTimer, forKey: "showFloatingTimer")
         }
     }
 

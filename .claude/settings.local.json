@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -r \"settings\" /Users/mb/Documents/2026/labs/mac/Pomosh-macOS/Pomosh/*.swift 2>/dev/null | head -20)",
+      "Bash(grep -r \"UserDefaults\\\\|Notification\\\\|Sound\" /Users/mb/Documents/2026/labs/mac/Pomosh-macOS/Pomosh/*.swift 2>/dev/null | wc -l)",
+      "Bash(grep -r \"colorLiteral\\\\|#color\\\\|Color\\\\\\(\" /Users/mb/Documents/2026/labs/mac/Pomosh-macOS/Pomosh/*.swift 2>/dev/null | grep -E \"0\\\\.[0-9]+\" | head -15)",
+      "Bash(cd /Users/mb/Documents/2026/labs/mac/Pomosh-macOS/.claude/worktrees/pomosh-improvements && git add -A && git status)",
+      "Bash(cd /Users/mb/Documents/2026/labs/mac/Pomosh-macOS/.claude/worktrees/pomosh-improvements && git restore --staged .claude/worktrees/ && git add Pomosh/ .claude/settings.local.json)"
+    ]
+  }
+}
